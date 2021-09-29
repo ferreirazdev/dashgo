@@ -1,6 +1,6 @@
 import { Flex, Button, Stack } from "@chakra-ui/react"
-import { SubmitHandler, useForm } from 'react-hook-form';
 import * as yup from 'yup';
+import { SubmitHandler, useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup'
 
 import { Input } from "../components/Form/Input"
@@ -47,10 +47,10 @@ export default function Home() {
         <Stack spacing="4">
           <Input name="email" type="email" label="E-mail" 
             error={errors.email}
-            {...register}/>
+            {...register('email')}/>
           <Input name="password" type="password" label="Senha"
             error={errors.password}
-            {...register}/>
+            {...register('password')}/>
         </Stack>
 
         <Button 
